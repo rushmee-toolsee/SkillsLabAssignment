@@ -1,0 +1,42 @@
+﻿.modal.fade .modal-dialog {
+    transform: scale(0.1);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+}
+
+.modal-content {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.username {
+    font-size: 20px;
+    margin-left: 1%;
+    width: fit-content;
+    background-color: #94b9933d;
+    padding: 10px;
+    box-shadow: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: auto;
+}

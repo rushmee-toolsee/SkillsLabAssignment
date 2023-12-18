@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/LoginValidationScript.js"></script>
+    <link href="~/CSS/Login.css" rel="stylesheet" />
+    <link href="~/CSS/button.css" rel="stylesheet" />
+    <link href="~/CSS/Label_Input.css" rel="stylesheet" />
+    <link href="~/CSS/Checkbox.css" rel="stylesheet" />
+    <link href="~/CSS/ErrorMessage.css" rel="stylesheet" />
+    <script src="~/Scripts/LoginShowPW.js"></script>
+    <title>Training Registration</title> 
+</head>
+<body>
+    @{
+        Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    }
+    <form action="@Url.Action("VerifyLogin", "Login")" method="post">
+
+        <div class="background-image-container">
+            <div class="login-card">
+                <div id="errorMessages"></div>
+                <h1>Login</h1>
+                <input class="inputs" type="text" name="EmailAddress" placeholder="Enter User Email" required="" />
+                <input class="inputs" type="password" name="Password" placeholder="Enter Password" required="" id="myInput" />
+                <label class="checktext">Show password <input type="checkbox" onclick="LoginPW()"> <span class="checkmark"></span></label>
+                <input class="button" type="submit" value="LOGIN">
+                <a href="/Register/Index"> Don't have an account? </a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

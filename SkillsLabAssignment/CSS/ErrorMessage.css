@@ -1,0 +1,12 @@
+﻿#errorMessages {
+    background-color: #df7e7ec2;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    padding: 0px 0px 0px 25px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-image: url(https://i.imgur.com/GnyDvKN.png);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}

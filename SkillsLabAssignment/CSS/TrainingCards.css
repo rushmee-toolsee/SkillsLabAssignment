@@ -1,0 +1,127 @@
+﻿body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#trainingContainer {
+    display: flex;
+    margin-left: 5%;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: inline-flex;
+    height: 300px;
+    width: 260px;
+    margin: 30px auto;
+    margin: 10px;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+ 
+.training-info {
+    float: left;
+    height: 260px;
+    width: 210px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+}
+
+.training-text {
+    height: 245px;
+    width: 200px;
+}
+
+    .training-text h1 {
+        margin: 0 0 0 20px;
+        padding-top: 18px;
+        font-size: 27px;
+        color: #474747;
+    }
+
+    .training-text h1,
+    .training-price-btn p {
+     }
+
+    .training-text h2 {
+        margin: 7px 0 7px 39px;
+        font-size: 12px;
+         font-weight: 400;
+        text-transform: uppercase;
+        color: #d2d2d2;
+        letter-spacing: 0.2em;
+    }
+
+    .training-text p {
+        height: 125px;
+        margin: 15px 0 0 5px;
+         color: #8d8d8d;
+        line-height: 1.7em;
+        font-size: 15px;
+        font-weight: lighter;
+        overflow: hidden;
+    }
+
+    .training-price-btn p {
+        display: inline-block;
+        position: absolute;
+         height: 50px;
+         font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
+
+    }
+.training-price-btn {
+    margin-top: -26px;
+}
+
+span {
+    display: inline-block;
+    height: 50px;
+    font-size: 34px;
+}
+
+.button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #3d6457;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1.25;
+    margin-top: 5%;
+    margin: 9px;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 83px;
+}
+    .button:hover,
+    .button:focus {
+        background-color: #619986;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    .button:hover {
+        transform: translateY(-1px);
+    }
+
+    .button:active {
+        background-color: #85cab3;
+        box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+        transform: translateY(0);
+    }
+ 

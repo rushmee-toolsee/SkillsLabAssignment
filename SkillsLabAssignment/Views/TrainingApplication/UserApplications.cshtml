@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "UserApplications";
+}
+
+@model List<DataAccessLayer.Models.TrainingApplication>
+
+<h2>Your Applications</h2>
+
+
+<div class="card-container">
+    @foreach (var application in Model)
+    {
+        <div class="card">
+            <div class="card-header">
+                @application.TrainingTitle 
+            </div>
+            <div class="card-body">
+                <p>Status: @application.ApplicationStatus</p>
+                <p>Submission Date: @application.SubmissionDate</p>
+                <p>Manager Approval Status: @application.ManagerApprovalStatus</p>
+                <p>Decline Reason: @application.DeclineReason</p>
+            </div>
+        </div>
+    }
+</div>
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px; 
+    }
+
+    .card {
+        box-shadow: 0 7px 11px rgba(0, 0, 0, 0.1);
+        width: 280px;
+    }
+
+    .card-header {
+        background-color: #3c897438;
+        padding: 14px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+</style>

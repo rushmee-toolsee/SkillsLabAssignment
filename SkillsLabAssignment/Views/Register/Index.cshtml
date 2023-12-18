@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "View";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/PopulateManagers.js"></script>
+    <script src="~/Scripts/RegisterValidationScript.js"></script>
+    <link href="~/CSS/Register.css" rel="stylesheet" />
+    <link href="~/CSS/BaseLayout.css" rel="stylesheet" />
+    <link href="~/CSS/button.css" rel="stylesheet" />
+    <link href="~/CSS/Label_Input.css" rel="stylesheet" />
+    <link href="~/CSS/ErrorMessage.css" rel="stylesheet" />
+    <title>Training Registration</title>
+</head>
+<body>
+    @{
+        Layout = "~/Views/Shared/_LayoutPage1.cshtml";  
+    }
+    <form action="@Url.Action("HandleRegistration", "Register")" method="post">
+
+        <div class="sidebar" style="background-image: linear-gradient(rgb(0 0 0 / 34%),rgba(0, 0, 0, 0.5)), url('../../images/main5.jpg'); ">
+            <div class="title">
+                <p>REGISTER</p>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="formCard">
+                <div class="container">
+                    <div id="errorMessages">
+
+                    </div>
+                    <label class="labels" for="FirstName"><b>First Name:</b></label>
+                    <input class="inputs" type="text" name="FirstName" required>
+
+                    <label class="labels" for="LastName"><b>Last Name:</b></label>
+                    <input class="inputs" type="text" name="LastName" required>
+
+                    <label class="labels" for="EmailAddress"><b>Email:</b></label>
+                    <input class="inputs" type="text" name="EmailAddress" required>
+
+                    <label class="labels" for="NationalIdentityNumber"><b>NIC:</b></label>
+                    <input class="inputs" type="text" name="NationalIdentityNumber" required>
+
+                    <label class="labels" for="PhoneNumber"><b>Phone:</b></label>
+                    <input class="inputs" type="text" name="PhoneNumber" required>
+
+                    <label class="labels" for="DepartmentName"><b>Department:</b></label>
+                    <select name="DepartmentName" id="departmentDropdown" onchange="getManagers()" aria-placeholder="Choose your department">
+                        <option value="Product and Technology">Product and Technology</option>
+                        <option value="Customer Support">Customer Support</option>
+                        <option value="Human Resource">Human Resource</option>
+                        <option value="Other">Other</option>
+                    </select>
+       
+                    <label class="labels" for="manager"><b>Manager:</b></label>
+                    <select name="ManagerName" id="managerDropdown" aria-placeholder="Choose your manager" required>
+                    </select>
+
+                    <label class="labels" for="Password"><b>Password:</b></label>
+                    <input class="inputs" type="password" name="Password" required>
+
+                    <label class="labels" for="ConfirmPassword"><b>Confirm Password:</b></label>
+                    <input class="inputs" type="password" name="ConfirmPassword" required><br />
+                    <input class="button" type="submit" value="Register">
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Training";
+}
+
+<html lang="en">
+
+<head>
+    <link href="~/CSS/TrainingCards.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/PopulateTrainings.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="~/CSS/Training.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="username">
+        Welcome, @ViewBag.UserName
+    </div>
+
+    <div class="container mt-3">
+        <div class="d-flex justify-content-end mb-3">
+            <div class="form-inline">
+                <label class="mr-2" for="searchInput">Search by Title:</label>
+                <input type="text" class="form-control form-control-sm mr-2" id="searchInput" placeholder="Enter title">
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered" id="trainingTable"></table>
+    <div class="modal fade" id="trainingDetailsModal" tabindex="-1" role="dialog" aria-labelledby="trainingDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trainingDetailsModalLabel">Training Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="trainingDetailsTitle"></h2>
+                    <p id="trainingDetailsDescription"></p>
+                    <p id="trainingDetailsPreRequisite"></p>
+                    <p id="trainingDetailsDeadline"></p>
+                    <p id="trainingDetailsSeat"></p>
+                    <p id="trainingDetailsDate"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">Apply for Training</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="applyForm" enctype="multipart/form-data">
+                        <h4 id="applyTrainingTitle"></h4>
+                        <p>Upload your application file:</p>
+                        <input type="file" id="fileInput" class="form-control mb-3" name="file">
+                        <button type="button" class="btn btn-primary" onclick="submitApplication()">Submit Application</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
